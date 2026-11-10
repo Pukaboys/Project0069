@@ -1,0 +1,53 @@
+{
+  "expo": {
+    "name": "Counterform",
+    "slug": "countertop",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "plugins": [
+      "expo-router",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow Counterform to photograph your countertop.",
+          "recordAudioAndroid": false
+        }
+      ]
+    ],
+    "scheme": "counterform",
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.jeorg.counterform",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Counterform uses the camera to capture countertop reference photos.",
+        "UIFileSharingEnabled": true,
+        "LSSupportsOpeningDocumentsInPlace": true,
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "router": {
+        "asyncRoutes": {
+          "web": true
+        }
+      },
+      "eas": {
+        "projectId": "2d89d22b-f59e-479e-bbd5-a6150a5786e4"
+      }
+    }
+  }
+}
